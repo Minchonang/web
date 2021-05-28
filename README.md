@@ -1,1 +1,1 @@
-# starting web development
+# studying web development
