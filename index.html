@@ -4,14 +4,28 @@
     <title>What's the WEB?</title>
     <meta charset="utf-8">
     <style>
+        body {
+            margin:0;
+        }
         h1 {
+            text-align: center;
             color:black;
+            border-bottom: 2px solid #142748;
+            margin: 0px;
+            padding: 20px;
         }
         h2 {
             font-size: 40px;
             text-align: center;
         }
-        li {
+        #grid ol {
+            border-right: 2px solid #142748;
+            width: 150px;
+            margin:0;
+            padding: 40px;
+            width: 100px;
+        }
+        #grid li {
             font-size: 20px;
             text-decoration: none;
         }
@@ -24,6 +38,19 @@
         }
         .title {
             text-align: left;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        #article {
+            padding-top: 0;
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+        #inside {
+            text-align: initial;
+            line-height: 25px;
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,23 +65,29 @@
 </head>
 
 <body>
-    <p><h1><a href="index.html" style="font-size:70px;">WEB</a></h1></p>
-    <ol>
-        <li><a href="HTML.html" style="color:rgb(255, 30, 0);" class="saw active"><strong>HTML</strong></a></li>
-        <li><a href="CSS.html" style="color:blue;" class="saw active"><strong>CSS</strong></a></li>
-        <li><a href="JavaScript.html" style="color:#F7E018;" class="saw active"><strong>JavaScript</strong></a></li>
-    </ol>
-    <p><h2 style="font-size:70px; ">WEB</h2></p>
-    <p><h3>WEB이란 무엇인가?</h3></p>
-    <p><img src="https://miro.medium.com/max/1796/0*1pc3uBYgX58bXF0b.jpeg" width="50%"></p>
-    <p><h6>이미지 출처: <a href="https://medium.com/@xipetechnology/happy-anniversary-of-the-world-wide-web-a239f957c1" target="_blink" title="XIPE Technology">XIPE Technology</a></h6></p>
-    <p><a href="https://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9" target="_blank" title="WWW 위키 백과">
-        <strong>W</strong>orld <strong>W</strong>ide <strong>W</strong>eb</a></p>
-    <p>월드 와이드 웹(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간을 말한다.<br>
-        간단히 웹(the Web)이라 부르는 경우가 많다. 이 용어는 인터넷과 동의어로 쓰이는 경우가 많으나 엄격히 말해 서로 다른 개념이다.<br>
-        웹은 전자 메일과 같이 인터넷 상에서 동작하는 하나의 서비스일 뿐이다. 그러나 1993년 이래로 웹은 인터넷 구조의 절대적 위치를 차지하고 있다.<br>
-        인터넷에서 HTTP 프로토콜, 하이퍼텍스트, HTML형식 등을 사용하여 그림과 문자를 교환하는 전송방식을 말하기도 한다.</p>
-        <h6>출처: 위키백과</h6>
+    <h1><a href="index.html" style="font-size:70px;">WEB & Web develope language</a></h1>
+    <div id="grid">
+            <ol>
+                <li><a href="HTML.html" style="color:rgb(255, 30, 0);"><strong>HTML</strong></a></li>
+                <li><a href="CSS.html" style="color:blue;"><strong>CSS</strong></a></li>
+                <li><a href="JavaScript.html" style="color:#F7E018;"><strong>JavaScript</strong></a></li>
+            </ol>
+        <div id="article">
+            <p><h2 style="font-size:70px; border-bottom: black solid 4px;">WEB</h2></p>
+            <p><h3>WEB이란 무엇인가?</h3></p>
+            <p><img src="https://miro.medium.com/max/1796/0*1pc3uBYgX58bXF0b.jpeg" width="50%"></p>
+            <p><h6>이미지 출처: <a href="https://medium.com/@xipetechnology/happy-anniversary-of-the-world-wide-web-a239f957c1" target="_blink" title="XIPE Technology">XIPE Technology</a></h6></p>
+            <p><a href="https://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9" target="_blank" title="WWW 위키 백과">
+                <strong>W</strong>orld <strong>W</strong>ide <strong>W</strong>eb</a></p>
+            <p id="inside">
+                월드 와이드 웹(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간을 말한다.<br>
+                간단히 웹(the Web)이라 부르는 경우가 많다. 이 용어는 인터넷과 동의어로 쓰이는 경우가 많으나 엄격히 말해 서로 다른 개념이다.<br>
+                웹은 전자 메일과 같이 인터넷 상에서 동작하는 하나의 서비스일 뿐이다. 그러나 1993년 이래로 웹은 인터넷 구조의 절대적 위치를 차지하고 있다.<br>
+                인터넷에서 HTTP 프로토콜, 하이퍼텍스트, HTML형식 등을 사용하여 그림과 문자를 교환하는 전송방식을 말하기도 한다.
+            </p>
+            <h6>출처: 위키백과</h6>
+        </div>
+    </div>
     <p>
         <div id="disqus_thread"></div>
         <script>

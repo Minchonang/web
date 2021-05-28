@@ -4,26 +4,55 @@
     <title>What's the CSS?</title>
     <meta charset="utf-8">
     <style>
+        body {
+            margin:0;
+        }
         h1 {
             color:#214CE5;
+            text-align: center;
+            border-bottom: 2px solid #214CE5;
+            margin: 0px;
+            padding: 20px;
         }
         a {
             text-decoration: none;
+            text-align: initial;
+        }
+        h2 {
+            font-size: 40px;
             text-align: center;
         }
-        h2{
-            font-size:40px;
-            text-align: center;
-        }
-        li {
+        #grid li {
             font-size:20px;
         }
+        #grid ol {
+            border-right: 2px solid #214CE5;
+            width: 150px;
+            margin:0;
+            padding: 40px;
+            width: 100px;
+        }
         p, h3, h6 {
-            text-align:center;
+            text-align: center;
         }
         .active {
             font-size: 30px;
             text-decoration: underline;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        #article {
+            padding-top: 0;
+            padding-left: 320px;
+            padding-right: 320px;
+        }
+        #inside{
+            text-align: initial;
+            padding-left: 90px;
+            padding-right: 90px;
+            line-height: 25px;
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,25 +67,29 @@
 </head>
 
 <body>
-    <h1><a href="index.html" style="font-size:70px; color:black;">WEB</a></h1>
-    <ol>
-        <li><a href="HTML.html" style="color:rgb(255, 30, 0);"><strong>HTML</strong></a></li>
-        <li><a href="CSS.html" style="color:#214CE5;" class="active"><strong>CSS</strong></a></li>
-        <li><a href="JavaScript.html" style="color:#F7E018;"><strong>JavaScript</strong></a></li>
-    </ol>
-    <h2 style="color:#214CE5; font-size:70px;">CSS</h2>
-    <h3>CSS란 무엇인가?</h3>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/220px-CSS3_logo_and_wordmark.svg.png" width="13%"></p>
-    <p><a href="https://ko.wikipedia.org/wiki/CSS" target="_blank" title="CSS 위키백과" style="text-align:center">Cascading Style Sheets</a></p>
-    <p><strong>종속형 시트</strong> 또는 <strong>캐스케이딩 스타일 시트(Cascading Style Sheets, CSS)</strong>는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로,<br>
-        HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다.<br>
-        마크업 언어(ex: HTML)가 웹사이트의 몸체를 담당한다면 CSS는 옷과 액세서리처럼 꾸미는 역할을 담당한다고 할 수 있다.<br>
-        즉, HTML 구조는 그대로 두고 CSS 파일만 변경해도 전혀 다른 웹사이트처럼 꾸밀 수 있다.</p>
-    <p>현재 개발 중인 CSS3의 경우 그림자 효과, 그라데이션, 변형 등 그래픽 편집 프로그램으로 제작한 이미지를 대체할 수 있는 기능이 추가되었다.<br>
-        또한 다양한 애니메이션 기능이 추가되어 어도비 플래시를 어느 정도 대체하고 있다.</p>
-    <h6>출처: 위키백과</h6>
-    <p><h3>참고 영상</h3></p>
-    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <h1><a href="index.html" style="font-size:70px; color:#214CE5;">WEB</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="HTML.html" style="color:rgb(255, 30, 0);"><strong>HTML</strong></a></li>
+            <li><a href="CSS.html" style="color:#214CE5;" class="active"><strong>CSS</strong></a></li>
+            <li><a href="JavaScript.html" style="color:#F7E018;"><strong>JavaScript</strong></a></li>
+        </ol>
+        <div id="article">
+            <h2 style="color:#214CE5; font-size:70px; border-bottom: #214CE5 solid 4px">CSS</h2>
+            <h3>CSS란 무엇인가?</h3>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/220px-CSS3_logo_and_wordmark.svg.png" width="25%"></p>
+            <p><a href="https://ko.wikipedia.org/wiki/CSS" target="_blank" title="CSS 위키백과" style="color: #214CE5; border-bottom: 2px solid #214CE5;"><strong>Cascading Style Sheets</strong></a></p>
+            <p id="inside"><strong>종속형 시트</strong> 또는 <strong>캐스케이딩 스타일 시트(Cascading Style Sheets, CSS)</strong>는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로,<br>
+                HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다.<br>
+                마크업 언어(ex: HTML)가 웹사이트의 몸체를 담당한다면 CSS는 옷과 액세서리처럼 꾸미는 역할을 담당한다고 할 수 있다.<br>
+                즉, HTML 구조는 그대로 두고 CSS 파일만 변경해도 전혀 다른 웹사이트처럼 꾸밀 수 있다.
+                현재 개발 중인 CSS3의 경우 그림자 효과, 그라데이션, 변형 등 그래픽 편집 프로그램으로 제작한 이미지를 대체할 수 있는 기능이 추가되었다.<br>
+                또한 다양한 애니메이션 기능이 추가되어 어도비 플래시를 어느 정도 대체하고 있다.</p>
+            <h6>출처: 위키백과</h6>
+            <p><h3>참고 영상</h3></p>
+            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        </div>
+    </div>
 </body>
 </html>
