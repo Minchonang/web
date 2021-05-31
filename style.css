@@ -6,13 +6,14 @@ a {
     text-align: initial;
 }
 h2 {
-    font-size:40px;
+    font-size: 40px;
     text-align: center;
 }
 #grid li {
     font-size:20px;
 }
 #grid ol {
+    list-style: none;
     width: 150px;
     margin:0;
     padding: 40px;
@@ -27,14 +28,17 @@ p, h3, h6 {
 }
 #article {
     padding-top: 0;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 #inside{
     text-align: initial;
     padding-left: 100px;
     padding-right: 100px;
     line-height: 25px;
+}
+#disqus {
+    padding: 50px;
 }
 @media(max-width: 800px) {
     #grid {
